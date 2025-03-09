@@ -5,14 +5,15 @@ class DrumKit {
     this.currentKick = "./sounds/kick-classic.wav";
     this.currentSnare = "./sounds/snare-acoustic01.wav";
     this.currentHihat = "./sounds/hihat-acoustic01.wav";
-    this.kickaudio = document.querySelector(".kick-sound");
-    this.snareaudio = document.querySelector(".snare-sound");
-    this.hihataudio = document.querySelector(".hihat-sound");
+    this.kickAudio = document.querySelector(".kick-sound");
+    this.snareAudio = document.querySelector(".snare-sound");
+    this.hihatAudio = document.querySelector(".hihat-sound");
     this.index = 0;
     this.bpm = 150;
     this.isPlaying = null;
     this.selects = document.querySelectorAll("select");
     this.muteBtns = document.querySelectorAll(".mute");
+    this.tempoSlider=document.querySelector(".tempo-slider");
   }
 
   activePad() {
@@ -29,16 +30,16 @@ class DrumKit {
       if (bar.classList.contains("active")) {
         //check each sound
         if (bar.classList.contains("kick-pad")) {
-          this.kickaudio.currentTime = 0;
-          this.kickaudio.play();
+          this.kickAudio.currentTime = 0;
+          this.kickAudio.play();
         }
         if (bar.classList.contains("snare-pad")) {
-          this.snareaudio.currentTime = 0;
-          this.snareaudio.play();
+          this.snareAudio.currentTime = 0;
+          this.snareAudio.play();
         }
         if (bar.classList.contains("hihat-pad")) {
-          this.hihataudio.currentTime = 0;
-          this.hihataudio.play();
+          this.hihatAudio.currentTime = 0;
+          this.hihatAudio.play();
         }
       }
     });
@@ -75,13 +76,13 @@ class DrumKit {
     const selectionValue = e.target.value;
     switch (selectionName) {
       case "kick-select":
-        this.kickaudio.src = selectionValue;
+        this.kickAudio.src = selectionValue;
         break;
       case "snare-select":
-        this.snareaudio.src = selectionValue;
+        this.snareAudio.src = selectionValue;
         break;
       case "hihat-select":
-        this.hihataudio.src = selectionValue;
+        this.hihatAudio.src = selectionValue;
         break;
     }
   }
@@ -92,29 +93,45 @@ class DrumKit {
     if( e.target.classList.contains("active")){
       switch(muteIndex){
         case "0":
-        this.kickaudio.volume = 0;
+        this.kickAudio.volume = 0;
         break;
         case "1":
-          this.snareaudio.volume = 0;
+          this.snareAudio.volume = 0;
           break;
           case "2":
-            this.hihataudio.volume = 0;
+            this.hihatAudio.volume = 0;
             break;
       }
     }else{
       switch(muteIndex){
         case "0":
-        this.kickaudio.volume = 1;
+        this.kickAudio.volume = 1;
         break;
         case "1":
-          this.snareaudio.volume = 1;
+          this.snareAudio.volume = 1;
           break;
           case "2":
-            this.hihataudio.volume = 1;
+            this.hihatAudio.volume = 1;
             break;
       }
     }
   }
+
+  changeTempo(e){
+    const tempoTxt= document.querySelector(".tempo-nr");
+    tempoTxt.innerText=e.target.value;
+  }
+
+  updateTempo(e){
+    this.bpm=e.target.value;
+    clearInterval(this.isPlaying);
+    this.isPlaying=null;
+    const playBtn =document.querySelector(".play");
+    if(playBtn.classList.contains("active")){
+          this.start();
+    }
+  }
+
 }
 
 const drumKit = new DrumKit();
@@ -144,3 +161,13 @@ drumKit.muteBtns.forEach((btn) => {
     drumKit.mute(e);
   });
 });
+
+drumKit.tempoSlider.addEventListener('input',function(e){
+  drumKit.changeTempo(e);
+
+})
+
+drumKit.tempoSlider.addEventListener('change',function(e){
+  drumKit.updateTempo(e);
+
+})
