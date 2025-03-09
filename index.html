@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="sequencer">
         <div class="kick-track">
             <div class="controls">
-              <h1>kick</h1>
+              <h1>Kick</h1>
               <button data-track="0" class="mute kick-volume">
                 <i class="fas fa-volume-mute"></i>
               </button>
@@ -19,6 +20,7 @@
                 <option value="./sounds/kick-classic.wav">Classic Kick</option>
                 <option value="./sounds/kick-808.wav">808 Kick</option>
                 <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+                <option value="./sounds/kick-softy.wav">Kick softy</option>
               </select>
             </div>
             <div class="kick">
@@ -37,15 +39,15 @@
 
       <div class="snare-track">
         <div class="controls">
-          <h1>kick</h1>
-          <button data-track="0" class="mute snare-volume">
+          <h1>Snare</h1>
+          <button data-track="1" class="mute snare-volume">
             <i class="fa-solid fa-volume-xmark"></i>
           </button>
 
           <select name="snare-select" id="snare-select">
-            <option value="./sounds/snare-classic.wav">Classic Kick</option>
-            <option value="./sounds/snare-808.wav">808 Kick</option>
-            <option value="./sounds/snare-heavy.wav">Kick Heavy</option>
+            <option value="./sounds/snare-acoustic01.wav">Classic Snare</option>
+            <option value="./sounds/snare-808.wav">808 Snare</option>
+            <option value="./sounds/snare-vinyl02.wav">Snare Vinyl</option>
           </select>
         </div>
         <div class="snare">
@@ -63,8 +65,8 @@
 
       <div class="hihat-track">
         <div class="controls">
-          <h1>kick</h1>
-          <button data-track="0" class="mute hihat-volume">
+          <h1>Hihat</h1>
+          <button data-track="2" class="mute hihat-volume">
             <i class="fas fa-volume-mute"></i>
           </button>
 
@@ -98,6 +100,6 @@
 
 
     <script src="app.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></script> -->
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   </body>
 </html>

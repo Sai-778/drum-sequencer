@@ -113,6 +113,10 @@ button{
     justify-content: center;
 }
 
+.mute.active{
+    background-color: rgb(209, 199, 199);
+}
+
 @keyframes playTrack {
     from{
 transform: scale(1);
