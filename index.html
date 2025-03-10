@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="sequencer">
-        <div class="kick-track">
-            <div class="controls">
-              <h1>Kick</h1>
-              <button data-track="0" class="mute kick-volume">
-                <i class="fas fa-volume-mute"></i>
-              </button>
-    
-              <select name="kick-select" id="kick-select">
-                <option value="./sounds/kick-classic.wav">Classic Kick</option>
-                <option value="./sounds/kick-808.wav">808 Kick</option>
-                <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
-                <option value="./sounds/kick-softy.wav">Kick softy</option>
-              </select>
-            </div>
-            <div class="kick">
-                    <div class="pad kick-pad b0"></div>
-                    <div class="pad kick-pad b1"></div>
-                    <div class="pad kick-pad b2"></div>
-                    <div class="pad kick-pad b3"></div>
-                    <div class="pad kick-pad b4"></div>
-                    <div class="pad kick-pad b5"></div>
-                    <div class="pad kick-pad b6"></div>
-                    <div class="pad kick-pad b7"></div>
-                    
-            </div>
-          </div>
+      <div class="kick-track">
+        <div class="controls">
+          <h1>Kick</h1>
+          <button data-track="0" class="mute kick-volume">
+            <i class="fas fa-volume-mute"></i>
+          </button>
 
+          <select name="kick-select" id="kick-select">
+            <option value="./sounds/kick-classic.wav">Classic Kick</option>
+            <option value="./sounds/kick-808.wav">808 Kick</option>
+            <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+            <option value="./sounds/kick-softy.wav">Kick softy</option>
+          </select>
+        </div>
+        <div class="kick">
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+        </div>
+      </div>
 
       <div class="snare-track">
         <div class="controls">
@@ -51,15 +55,14 @@
           </select>
         </div>
         <div class="snare">
-                <div class="pad snare-pad b0"></div>
-                <div class="pad snare-pad b1"></div>
-                <div class="pad snare-pad b2"></div>
-                <div class="pad snare-pad b3"></div>
-                <div class="pad snare-pad b4"></div>
-                <div class="pad snare-pad b5"></div>
-                <div class="pad snare-pad b6"></div>
-                <div class="pad snare-pad b7"></div>
-                
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
         </div>
       </div>
 
@@ -71,40 +74,48 @@
           </button>
 
           <select name="hihat-select" id="hihat-select">
-            <option value="./sounds/hihat-acoustic01.wav">hihat acoustic</option>
+            <option value="./sounds/hihat-acoustic01.wav">
+              hihat acoustic
+            </option>
             <option value="./sounds/hihat-808.wav">808 hihat</option>
-          
           </select>
         </div>
         <div class="hihat">
-                <div class="pad hihat-pad b0"></div>
-                <div class="pad hihat-pad b1"></div>
-                <div class="pad hihat-pad b2"></div>
-                <div class="pad hihat-pad b3"></div>
-                <div class="pad hihat-pad b4"></div>
-                <div class="pad hihat-pad b5"></div>
-                <div class="pad hihat-pad b6"></div>
-                <div class="pad hihat-pad b7"></div>
-                
+          <div class="pad hihat-pad b0"></div>
+          <div class="pad hihat-pad b1"></div>
+          <div class="pad hihat-pad b2"></div>
+          <div class="pad hihat-pad b3"></div>
+          <div class="pad hihat-pad b4"></div>
+          <div class="pad hihat-pad b5"></div>
+          <div class="pad hihat-pad b6"></div>
+          <div class="pad hihat-pad b7"></div>
         </div>
       </div>
 
       <button class="play">Play</button>
 
       <div class="tempo">
-        <input type="range" class="tempo-slider" max="300" min="20" value="150">
+        <input
+          type="range"
+          class="tempo-slider"
+          max="300"
+          min="20"
+          value="150"
+        />
         <p>Tempo: <span class="tempo-nr">150</span></p>
       </div>
-
     </div>
 
-    
     <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
     <audio class="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
     <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
 
-
     <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   </body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>
