@@ -6,8 +6,7 @@ A simple and interactive drum sequencer for creating beats and rhythms.
 - **Step Sequencer Grid** – Easily create beats with a visual grid.  
 - **Multiple Drum Kits** – Choose from different drum sounds.  
 - **Adjustable Tempo** – Set BPM to control playback speed.  
-- **Real-time Playback** – Hear changes instantly as you edit.  
-- **Save & Load** – Store and retrieve your drum patterns.  
+- **Real-time Playback** – Hear changes instantly as you edit.   
 
 ## 🚀 Installation  
 
